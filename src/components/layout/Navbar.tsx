@@ -1,6 +1,7 @@
 import React from 'react';
 import { TrendingUp, Upload, RefreshCw, RotateCcw, FileText, CheckCircle2, AlertCircle } from 'lucide-react';
 import { DatasetState } from '../../types/sales';
+import { InstallPwaButton } from './InstallPwaButton';
 
 interface NavbarProps {
   dataset: DatasetState;
@@ -91,6 +92,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Action Controls */}
         <div className="flex items-center gap-2">
+          <InstallPwaButton />
+
           <button
             onClick={onOpenUpload}
             className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 rounded-lg shadow-sm transition-all focus:ring-2 focus:ring-indigo-500/20"
